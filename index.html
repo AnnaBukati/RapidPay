@@ -930,18 +930,6 @@ tablet: isTabletPortrait
 Hide this object for a specific customer project shares and settings. Everyone else
 should see it.
 -->
-<a
-ng-if="( ! share.isEmbed && ! hideNavBar && ( project.companyID != 71 ) )"
-ng-class="{
-off: ( isBrowseOpen || isFlowOpen ),
-'initialized': $parent.UILoaded
-}"
-class="powered-by"
-ng-click="goToWWW()"
-target="_blank">
-<img src="assets/apps/share/img/logo-icon-v2.png" />
-<p>Made in InVision</p>
-</a>
 </script><script type="text/ng-template" id="/assets/apps/share/views/partials/preload.htm">	<!--
 BEGIN: HACKY CSS PRELOAD. 
 Until we have better sprite technology, let's at least pre-load the images this way so that 
@@ -1282,9 +1270,6 @@ Flow
 ng-show="includeBrowseTool"
 ng-class="{ on: isBrowseOpen }"
 class="tool browse-toggle-tool" ng>
-<div class="description" ng-click="toggleBrowse()" ng-mouseenter="handleBrowseWidth($event)" ng-mouseleave="browseWidth=0">
-<i class="toolbar-menu-sprite"></i>
-<span class="browse-text" style="width: {{ browseWidth }}">Screens ({{ $parent.screenCnt }})</span>
 </div>
 </div>
 </div>
